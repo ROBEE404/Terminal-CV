@@ -1,0 +1,232 @@
+/* Loading screen styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999; /* Makes sure it covers everything */
+}
+
+.apple-logo img {
+  width: 100px; /* Adjust the size to your preference */
+  height: 100px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.loading-bar-container {
+  width: 200px;
+  height: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.loading-bar {
+  width: 0;
+  height: 100%;
+  background-color: #00ff00;
+  animation: loading 3s linear forwards; /* Animation for loading bar */
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Hide terminal until loading completes */
+#terminalScreen {
+  display: none;
+}
+
+/* Body and terminal base styles */
+body {
+  margin: 0;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #342E37;
+}
+
+/* .terminal {
+  width: 600px;
+  height: auto;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  border: 2px solid #008628;
+} */
+
+.header {
+  background-color: #222;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  background-color: #ff605c;
+}
+
+.minimize-btn {
+  background-color: #ffbd44;
+}
+
+.expand-btn {
+  background-color: #00ca4e;
+}
+
+.close-btn, .minimize-btn, .expand-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Terminal content */
+.content {
+  padding: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background-color: #222;
+}
+
+span {
+  color: #0f0;
+  margin-right: 5px;
+}
+
+#prompt {
+  color: rgb(0, 207, 235);
+}
+
+/* Input styling */
+input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+  margin-left: 10px;
+  /* caret-color: #00ff00; */
+}
+
+input::placeholder {
+  color: #555;
+}
+
+/* Scrolling for terminal content */
+#terminalContent {
+  max-height: 70vh; /* Adjust this depending on your layout */
+  overflow-y: auto; /* Enable scrolling when content overflows vertically */
+  color: #87f8839f; /* Green text color for terminal */
+  font-family: monospace;
+  padding: 10px;
+  white-space: pre-wrap; /* Allow line breaks */
+  word-wrap: break-word; /* Wrap long words */
+}
+
+#commandInput {
+  width: 100%;
+  background-color: black;
+  color: #55a630; /* Green text color */
+  border: none;
+  outline: none;
+  font-family: monospace;
+  overflow-x: auto; /* Enable horizontal scrolling for long input lines */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Customize scrollbar appearance */
+#terminalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+#terminalContent::-webkit-scrollbar-thumb {
+  background-color: #55a630;
+  border-radius: 4px;
+}
+
+#commandInput::-webkit-scrollbar {
+  height: 8px;
+}
+
+#commandInput::-webkit-scrollbar-thumb {
+  background-color: #55a630;
+  border-radius: 4px;
+}
+
+/* Default terminal size */
+.terminal {
+  width: auto;
+  height: auto;
+  max-height: 400px; /* Set a maximum height */
+  background-color: black;
+  color: white;
+  border: 3px solid #cc6de9; /* The green border*/
+  border-radius: 5px; 
+  overflow-y: auto; /* Adds scroll if content exceeds height */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  transition: max-height 0.3s ease; /* Smooth height change */
+}
+
+/* Expanded terminal for skills display */
+.terminal-expanded {
+  width: auto; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+}
+/* Skills section layout fix */
+.skills-container {
+  display: flex;
+  justify-content: space-between; /* Spread out skills horizontally */
+  /* flex-wrap: nowrap; */
+  gap: 35px; /* Allows the skills to wrap to next line if needed */
+  padding: 10px 0; /* Add padding to avoid overlap */
+}
+.information-title {
+  display: flex;
+  margin-bottom: -60px;
+  font-family: monospace, monospace;
+}
+
+.skills-container ul {
+  list-style-type: style type ; /* Remove bullet points */
+  padding:15px;
+  
+}
+
+.skills-container ul li {
+  /* margin: 5px 10px; */
+  font-size: 16px; /* Adjust size for readability */
+  font-family: 'Courier New', monospace; /* Default font, can be changed */
+  color: #e4ee58; /* Green text */
+}
+
+/* Font change suggestion (you can test multiple fonts here) */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+.skills-container ul li {
+  font-family: 'Inconsolata', monospace; /* Cool terminal-like font */
+}
+.back{
+  color: #ff605c;
+}
+

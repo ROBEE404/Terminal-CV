@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>My Terminal CV</title>
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="apple-logo">
+      <img src="images/my logo.png" alt="Apple Logo">
+    </div>
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+    <div class="progress"></div>
+  </div>
+
+  <!-- Terminal Screen -->
+  <div class="terminal" id="terminalScreen" style="display: none;">
+    <div class="header">
+      <span class="close-btn"></span>
+      <span class="minimize-btn"></span>
+      <span class="expand-btn"></span>
+    </div>
+    <div class="content" id="terminalContent">
+      <p id="typing"></p>
+      <p>Type 'help' for available commands.</p>
+    </div>
+    <div class="input-container">
+      <span id="prompt">0xROBEE@mac:~$</span>
+      <input type="text" id="commandInput" placeholder="Enter command" />
+    </div>
+  </div>
+    
+  
+  <script src="script.js"></script>
+</body>
+</html>
