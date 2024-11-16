@@ -3,7 +3,7 @@ function typingEffect(element, text, speed) {
   const interval = setInterval(() => {
     const span = document.createElement("span");
     span.textContent = text.charAt(i);
-    span.style.color = "#ff6ab4"; // Green color for text
+    span.style.color = "#ff6ab4"; // it's color of the Welcome to My CV Terminal
     element.appendChild(span); // Append each letter as a span
     i++;
     if (i >= text.length) {
