@@ -1,40 +1,47 @@
+<!-- text.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>My Terminal CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal CV | 0xROBEE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="logo-container">
+            <img src="images/my logo.png" alt="Terminal Logo" class="terminal-logo">
+            <div class="glow"></div>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
 
-  <!-- Loading screen -->
-  <div id="loadingScreen" class="loading-screen">
-    <div class="apple-logo">
-      <img src="images/my logo.png" alt="Apple Logo">
+    <!-- Terminal Screen -->
+    <div class="terminal" id="terminalScreen">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control expand"></div>
+            </div>
+            <div class="terminal-title">0xROBEE@mac: ~</div>
+        </div>
+        
+        <div class="terminal-content" id="terminalContent">
+            <p id="typing"></p>
+            <p class="help-hint">Type 'help' for available commands</p>
+        </div>
+        
+        <div class="input-container">
+            <span id="prompt">➜</span>
+            <input type="text" id="commandInput" autofocus>
+        </div>
     </div>
-    <div class="loading-bar-container">
-      <div class="loading-bar"></div>
-    </div>
-    <div class="progress"></div>
-  </div>
 
-  <!-- Terminal Screen -->
-  <div class="terminal" id="terminalScreen" style="display: none;">
-    <div class="header">
-      <span class="close-btn"></span>
-      <span class="minimize-btn"></span>
-      <span class="expand-btn"></span>
-    </div>
-    <div class="content" id="terminalContent">
-      <p id="typing"></p>
-      <p>Type 'help' for available commands.</p>
-    </div>
-    <div class="input-container">
-      <span id="prompt">0xROBEE@mac:~$</span>
-      <input type="text" id="commandInput" placeholder="Enter command" />
-    </div>
-  </div>
-    
-  
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
