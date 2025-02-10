@@ -1,44 +1,41 @@
-<!-- text.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal CV | 0xROBEE</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <title>ROBEE Terminal CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading screen -->
-    <div id="loadingScreen" class="loading-screen">
-        <div class="logo-container">
-            <img src="images/my logo.png" alt="Terminal Logo" class="terminal-logo">
-            <div class="glow"></div>
-        </div>
-        <div class="loading-bar-container">
-            <div class="loading-bar"></div>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loader">
+            <div class="loader-text">Booting Terminal...</div>
+            <div class="loader-bar"></div>
         </div>
     </div>
 
-    <!-- Terminal Screen -->
-    <div class="terminal" id="terminalScreen">
-        <div class="terminal-header">
-            <div class="window-controls">
-                <div class="control close"></div>
-                <div class="control minimize"></div>
-                <div class="control expand"></div>
+    <!-- Terminal Interface -->
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="window-controls">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
             </div>
-            <div class="terminal-title">0xROBEE@mac: ~</div>
-        </div>
-        
-        <div class="terminal-content" id="terminalContent">
-            <p id="typing"></p>
-            <p class="help-hint">Type 'help' for available commands</p>
-        </div>
-        
-        <div class="input-container">
-            <span id="prompt">➜</span>
-            <input type="text" id="commandInput" autofocus>
+            
+            <div class="terminal-body" id="output">
+                <p id="welcome-text"></p>
+                <p class="help-text">Type 'help' to see available commands</p>
+            </div>
+            
+            <div class="input-line">
+                <span class="prompt">➜ 0xROBEE@CV:</span>
+                <input type="text" id="input" autofocus>
+            </div>
         </div>
     </div>
 
